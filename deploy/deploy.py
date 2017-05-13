@@ -1,14 +1,22 @@
 #!/usr/bin/env python
 import boto3
 import time
+import os
+
+
+def get_region():
+    if 'AWS_DEFAULT_REGION' in os.environ.keys():
+        return os.environ['AWS_DEFAULT_REGION']
+    else:
+        return 'eu-west-1'
 
 
 def get_ec2_client():
-    return boto3.client('ec2', region_name='eu-west-1')
+    return boto3.client('ec2', region=get_region())
 
 
 def get_ssm_client():
-    return boto3.client('ssm', region_name='eu-west-1')
+    return boto3.client('ssm', region=get_region())
 
 
 def instance_list():
