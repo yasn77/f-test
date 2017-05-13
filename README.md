@@ -76,6 +76,8 @@ To view the ELB hostname (so you can browse the site), run:
 terraform output elb_dns_name
 ```
 
+The site is viewable by browsing to `http://<ELB_ADDRESS>/myip/`
+
 ### Connecting to Servers
 All servers are accessible using the Jumphost with user `ubuntu` and key defined
 in Terraform config (`sshpubkey_file`)
