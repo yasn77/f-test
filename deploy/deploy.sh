@@ -1,4 +1,6 @@
 #!/bin/bash
 
-pip install -r requirements.txt
-python ./deploy.py
+this_dir=$(dirname $0)
+
+pip install -r ${this_dir}/requirements.txt
+python ${this_dir}/deploy.py
