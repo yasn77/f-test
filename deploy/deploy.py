@@ -12,11 +12,11 @@ def get_region():
 
 
 def get_ec2_client():
-    return boto3.client('ec2', region=get_region())
+    return boto3.client('ec2', region_name=get_region())
 
 
 def get_ssm_client():
-    return boto3.client('ssm', region=get_region())
+    return boto3.client('ssm', region_name=get_region())
 
 
 def instance_list():
