@@ -1,10 +1,6 @@
 language: python
 python:
-  - "2.7"
-  - "3.3"
   - "3.6"
-matrix:
-  allow_failures: [ python: "2.7" ]
 env:
   - AWS_DEFAULT_REGION=us-east-1
   - secure: "Zrf/X2JZtcepDWcj2B+ZvRFOYiiL4Sju5wq6fP91JFg+lpI/C4xhjcYCE91VM0sRYvHvj2V0rfcI1nCSdCJ+5sGLdDEYiNJTygtsm6VsTL6F3mFhGLV/Rj/3gxFfG2ykcgTT6mIEpX+CaJXsTapm7ad0TK6JSLPo2x2YJP0961Eq0z+UzCIRfdSD/nLiNIsC8HIOEeL31Aok72GBh8hxV7j3BTMor95TyoRRJWJxwDfkbl19LlTGk100tDhQ7IPsUB+8SjgZbG+a2DyQRDC7O8U40mmNvq8kr9FKuVF80KlYuGrEOwQBimEjWq/5tB+tWkhVVxlgSZMAjgYjcQ35WERa+OYye8gvahYMcS6QB/lcovqFF/l0eeKzEizR2gbyeLPrRagZGpFbbh7CuB7dEbkAGroG0b0tTcC1Xlh5qT4wSxQ015LqBGb21WxmenQ2wXaNT4Vz1D3+QeyHLpKfBJu0OLJuhHGluzx3NqPkqwqFoj8LewC3LiTeJ9ujD1wDC+vyqul9zmErA9xLwfTlADYCSlFTeb79ACy/NklInvwFUk+25Mn1yo5OlmfmQEUhKgctnkZS8Q5Mlp8nmpzAU2XRYcnJkkf5x4E1HqnhzGYSiUqmD+yjisyWpEu9DbvqvbuFPw4YmNbXmwVX15Cef/zjhxr10/+5VS3r6bKF2K4="
