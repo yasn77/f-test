@@ -1,4 +1,4 @@
 #!/bin/bash
 
-pip install -i requirements.txt
+pip install -r requirements.txt
 python ./deploy.py
