@@ -21,7 +21,7 @@ resource "aws_key_pair" "auth" {
 
 
 resource "aws_elb" "f_test_app_elb" {
-  name = "yasser_f-test-app-elb"
+  name = "yasser-f-test-app-elb"
 
   subnets = ["${aws_subnet.app_subnet.id}"]
   security_groups  = ["${aws_security_group.f_test_elb.id}"]
@@ -71,7 +71,6 @@ resource "aws_launch_configuration" "f_test_app" {
 }
 
 module "f_test_jumphost" {
-  name = "yasser_f_test_jumphost"
   source = "modules/f_test_instance"
   ami_id = "${var.ami_id}"
   key_name = "${aws_key_pair.auth.id}"
@@ -80,6 +79,7 @@ module "f_test_jumphost" {
   instance_type = "${var.instance_type}"
   tags = {
     role = "jumphost",
+    Name = "yasser_jumphost_f_test"
   }
   subnet_id = "${aws_subnet.jumphost_subnet.id}"
 }

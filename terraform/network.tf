@@ -22,7 +22,7 @@ resource "aws_route" "internet_access" {
 resource "aws_subnet" "app_subnet" {
   vpc_id                  = "${aws_vpc.f_test.id}"
   cidr_block              = "${var.app_subnet_id}"
-  map_public_ip_on_launch = false
+  map_public_ip_on_launch = true
   tags {
         Name = "yasser_app_subnet"
   }

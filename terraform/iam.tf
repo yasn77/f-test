@@ -19,7 +19,7 @@ EOF
 }
 
 resource "aws_iam_instance_profile" "f_test_app_profile" {
-  name  = "yasser_f_test_app_profile"
+  name  = "yasser_f_test_app_prof"
   role = "${aws_iam_role.f_test_app_role.name}"
 }
 
