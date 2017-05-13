@@ -4,10 +4,10 @@ variable "sshpubkey_file" {
   default = "sshpub.key"
 }
 variable "region" {
-  default = "eu-west-1"
+  default = "us-east-1"
 }
 variable "ami_id" {
-  default = "ami-0d77397e"
+  default = "ami-80861296"
 }
 variable "instance_type" {
   default = "t2.micro"
