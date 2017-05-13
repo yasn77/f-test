@@ -5,4 +5,4 @@ from ipware.ip import get_ip
 
 def index(request):
     ip = get_ip(request)
-    return HttpResponse("Hi, your Public IP is: {}".format(ip))
+    return HttpResponse("Hi, looks like your IP is {}".format(ip))
