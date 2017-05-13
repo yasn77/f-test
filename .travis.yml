@@ -1,0 +1,17 @@
+language: python
+python:
+  - "2.7"
+  - "3.3"
+  - "3.6"
+matrix:
+  allow_failures: [ python: "2.7" ]
+env:
+  - AWS_DEFAULT_REGION=us-east-1
+install:
+  - pip install -r app/f_test/requirements.txt
+script: run_tests.sh
+deploy:
+  provider: script
+  script: deploy/deploy.sh
+  on:
+    branch: master
