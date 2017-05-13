@@ -12,7 +12,7 @@ packages:
  - git
 
 write_files:
-  - contents: |
+  - content: |
       #!/bin/bash
       cd /src
       git pull -r
