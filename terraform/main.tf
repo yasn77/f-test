@@ -36,7 +36,7 @@ resource "aws_elb" "f_test_app_elb" {
 
 resource "aws_autoscaling_group" "f_test_app" {
   vpc_zone_identifier  = ["${aws_subnet.app_subnet.id}"]
-  max_size             = "5"
+  max_size             = "${var.app_instance_count}"
   min_size             = "${var.app_instance_count}"
   desired_capacity     = "${var.app_instance_count}"
   force_delete         = true
