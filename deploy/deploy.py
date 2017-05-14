@@ -20,6 +20,7 @@ def get_ssm_client():
 
 
 def instance_list():
+    instances = list()
     ec2 = get_ec2_client()
     response = ec2.describe_instances(
         Filters=[
@@ -28,14 +29,14 @@ def instance_list():
             {'Name': 'instance-state-name', 'Values': ['running']}
         ]
     )
-    return [[i['InstanceId'] for i in reservations['Instances']] for
-            reservations in response['Reservations']].pop()
+    for reservations in response['Reservations']:
+        [instances.append(i['InstanceId']) for i in reservations['Instances']]
+    return instances
 
 
 def run_command():
     ssm = get_ssm_client()
     instance_ids = instance_list()
-    print(instance_ids)
     for id in instance_ids:
         ssm_run_command = ssm.send_command(
             InstanceIds=[id],
